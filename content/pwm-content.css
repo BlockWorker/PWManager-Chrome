@@ -1,0 +1,23 @@
+iframe.pwm-iframe {
+  all: revert;
+  z-index: 9999;
+  position: absolute;
+  display: block;
+  background: transparent;
+  border: none;
+  width: 330px;
+  height: 222px;
+  overflow: hidden;
+}
+
+div.pwm-popup {
+  all: revert;
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  padding: 2px;
+  background: transparent;
+  width: 26px;
+  height: 32px;
+  z-index: 9999;
+}

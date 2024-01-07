@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html style="width: 330px; height: 222px; overflow: hidden; background-color: transparent">
+  <head>
+
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="../pwm.css">
+    <style>
+      td {
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+      
+      .input-wrapper {
+        padding: 4px;
+      }
+      
+      button.filled-button {
+        padding: 4px;
+      }
+      
+      .flex-item {
+        padding: 6px 8px 6px 8px;
+      }
+    </style>
+
+  </head>
+  <body style="margin: auto 0 0 0; padding: 0; background-color: transparent">
+
+    <div class="column-layout" style="margin: 0; padding: 0">
+      <form id="form" class="flex-item" style="margin: 0">
+        <table>
+          <tr><td>
+            <span id="master-wrapper" class="input-wrapper">
+              <span class="icon-spacer">
+                <span class="material-icons inline-icon">password</span>
+              </span>
+              <input type="text" id="master" name="pwm_master" placeholder="Master Password">
+            </span>
+          </td></tr>
+          <tr><td>
+            <span id="ident-wrapper" class="input-wrapper">
+              <span class="icon-spacer">
+                <span id="ident-icon" class="material-icons inline-icon">link</span>
+              </span>
+              <input type="text" id="ident" name="pwm_ident" placeholder="Identifier">
+              <span class="icon-spacer">
+                <span class="inline-icon" style="padding-top: 4px; pointer-events: auto">
+                  <button type="button" id="ident-switch" class="material-icons icon-button">first_page</button>
+                </span>
+              </span>
+            </span>
+          </td></tr>
+          <tr id="iter-row" style="display: none"><td>
+            <span id="iter-wrapper" class="input-wrapper">
+              <span class="icon-spacer">
+                <span class="material-icons inline-icon">tag</span>
+              </span>
+              <input type="number" id="iter" name="pwm_iter" value="0" min="0" placeholder="Iteration">
+            </span>
+          </td></tr>
+          <tr id="symbols-row" style="display: none"><td>
+            <span id="symbols-wrapper" class="input-wrapper">
+              <span class="icon-spacer">
+                <span class="material-icons inline-icon">emoji_symbols</span>
+              </span>
+              <input type="text" id="symbols" name="pwm_symbols" placeholder="Symbols">
+              <span class="icon-spacer">
+                <span class="inline-icon" style="padding-top: 4px; pointer-events: auto">
+                  <button type="button" id="allsymbols" class="material-icons icon-button">all_inclusive</button>
+                </span>
+              </span>
+            </span>
+          </td></tr>
+          <tr><td style="display: flex">
+            <button type="button" id="expand" class="material-icons icon-button" style="margin-right: 10px">expand_more</button>
+            <button type="button" id="long" class="material-icons filled-icon-button" style="margin-right: 10px">text_increase</button>
+            <button type="button" id="save" class="material-icons filled-icon-button filled-button-inactive" style="margin-right: 10px; display: none">save</button>
+            <button type="button" id="generate" class="filled-button" style="flex-grow: 1">Generate</button>
+          </td></tr>
+        </table>
+      </form>
+    </div>
+    
+    <script src="../pwm-core.js"></script>
+    <script src="pwm-content-inner.js"></script>
+
+  </body>
+</html>
